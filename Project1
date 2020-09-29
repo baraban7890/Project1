@@ -7,6 +7,7 @@
             {
                 System.out.println("File cannot be found buddy");
             }
+        int count = 0;
         int ID;
         String firstAndLastName;
         String rHall;
@@ -20,5 +21,7 @@
                 rHall = studentInfo[2];
                 status = studentInfo[3];
                 studentList.add(new Student(firstAndLastName, ID, rHall, status));
+                pairs.put(studentList.get(count), studentList.get(count).getID());
+                count++;
             }
     }
