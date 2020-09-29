@@ -1,0 +1,24 @@
+    public void readFile(File f)
+    {
+        try{
+        sc = new Scanner(f);
+        }
+        catch(FileNotFoundException e)
+            {
+                System.out.println("File cannot be found buddy");
+            }
+        int ID;
+        String firstAndLastName;
+        String rHall;
+        String status;
+        while(sc.hasNextLine())
+            {
+                String line = sc.nextLine();
+                String[] studentInfo = line.split(",");
+                firstAndLastName = studentInfo[0];
+                ID = Integer.parseInt(studentInfo[1]);
+                rHall = studentInfo[2];
+                status = studentInfo[3];
+                studentList.add(new Student(firstAndLastName, ID, rHall, status));
+            }
+    }
