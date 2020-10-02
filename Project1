@@ -1,27 +1,3 @@
-    public void readFile(File f)
-    {
-        try{
-        sc = new Scanner(f);
-        }
-        catch(FileNotFoundException e)
-            {
-                System.out.println("File cannot be found buddy");
-            }
-        int count = 0;
-        int ID;
-        String firstAndLastName;
-        String rHall;
-        String status;
-        while(sc.hasNextLine())
-            {
-                String line = sc.nextLine();
-                String[] studentInfo = line.split(",");
-                firstAndLastName = studentInfo[0];
-                ID = Integer.parseInt(studentInfo[1]);
-                rHall = studentInfo[2];
-                status = studentInfo[3];
-                studentList.add(new Student(firstAndLastName, ID, rHall, status));
-                pairs.put(studentList.get(count), studentList.get(count).getID());
-                count++;
-            }
-    }
+Once upon a time, there lived a very ordinary man with a very ordinary life. He had a wife, two kids, and half a dog with a picket fence surrounding his house. 
+He got along with his neighbors, but disliked John, the guy who kept throwing rocks over his fence, but who even liked that guy?
+He was absolutely content with everything in life, and didn't wish for more or less than what he had. He was blissful. One day, his half dog disappeared, and he thought to himself, "not again".
